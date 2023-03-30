@@ -1,0 +1,21 @@
+whisper_ros_node:
+  ros__parameters:
+    max_record_time: 10             # 録音の最大秒数
+    silence_span: 1                 # この秒数沈黙状態が続くと録音が終了する
+    volume_threshold: 0.5           # このボリュームを超えると録音が開始し、このボリュームを下回ると沈黙状態と判断する
+    record_file: /path/to/file.wav # 録音ファイル（temp）の一時的な保存場所
+  
+chat_gpt_ros_node:
+  ros__parameters:
+    system_message: ""              # use_system_roleがTrueのときは、systemに設定したいメッセージを設定する
+    model: "gpt-3.5-turbo"          # chatGPTのモデル
+    max_tokens: 1024                # 生成する文章の最大トークン数
+    max_total_tokens: 3000          # keep_conversation_historyがTrueのときは、会話履歴を保持する上限のトークン数を設定する
+    number_of_response: 1           # 返答数
+    temperature: 0.5                # 返答のランダム性。0だと同じ入力に対し毎回同じ返答を返す。
+    use_system_role: False          # messagesにsystemを設定するか
+    keep_conversation_history: True # 会話履歴を保持するか
+  
+voicevox_ros_node:
+  ros__parameters:
+    speaker: 2                      # 声モデルの設定
