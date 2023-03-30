@@ -1,0 +1,9 @@
+[submodule "chat_gpt_ros"]
+	path = chat_gpt_ros
+	url = https://github.com/YumaMatsumura/chat_gpt_ros.git
+[submodule "voicevox_ros"]
+	path = voicevox_ros
+	url = https://github.com/YumaMatsumura/voicevox_ros.git
+[submodule "whisper_ros"]
+	path = whisper_ros
+	url = https://github.com/YumaMatsumura/whisper_ros.git
